@@ -1,8 +1,19 @@
+" Sample .vimrc file by Martin Brochhaus
+" Presented at PyCon APAC 2012
+" Slides: TODO
+
+
+" ============================================
+" Note to myself:
+" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
+" ============================================
+
+
 " Automatic reloading of .vimrc
 "" autocmd! bufwritepost .vimrc source %
 
 
-" Better copy & paste (does not work on OSX)
+" Better copy & paste
 "" set pastetoggle=<F2>
 "" set clipboard=unnamed
 
@@ -17,6 +28,7 @@
 
 
 " Bind nohl
+" Removes highlight of your last search
 "" noremap <C-n> :nohl<CR>
 "" vnoremap <C-n> :nohl<CR>
 "" inoremap <C-n> :nohl<CR>
@@ -61,6 +73,8 @@
 
 
 " Color scheme
+" mkdir -p ~/.vim/colors && cd ~/.vim/colors
+" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 "" set t_Co=256
 "" color wombat256mod
 
@@ -116,6 +130,7 @@
 " Setup Pathogen to manage your plugins
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+" Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 "" call pathogen#infect()
 
 
