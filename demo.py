@@ -41,7 +41,6 @@ def life_syntax_checking():
 
 def code_completion():
     """Code completion makes life easy."""
-    life_syntax_checking
     # Try to call one of our methods here.
     # i.e.: Type ``li`` and then press ``<C-SPACE>``
     # You can navigate between then found choices by holding ``CTRL`` and using
