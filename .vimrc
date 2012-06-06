@@ -16,6 +16,12 @@ set bs=2     " make backspace behave like normal again
 let mapleader = ","
 
 
+" Bind nohl
+noremap <C-n> :nohl<CR>
+vnoremap <C-n> :nohl<CR>
+inoremap <C-n> :nohl<CR>
+
+
 " Quicksave command
 noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>
@@ -24,7 +30,7 @@ inoremap <C-Z> <C-O>:update<CR>
 
 " Quick quit command
 noremap <Leader>e :quit<CR>  " Quit current window
-noremap <Leader>E :qa!<CR>    " Quit all windows
+noremap <Leader>E :qa!<CR>   " Quit all windows
 
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
@@ -41,7 +47,6 @@ map <Leader>m <esc>:tabnext<CR>
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
-
 
 
 " easier moving of code blocks
@@ -80,21 +85,29 @@ highlight ColorColumn ctermbg=233
 vmap Q gq
 nmap Q gqap
 
+
 " Useful settings
 set history=700
 set undolevels=700
 
+
+" Real programmers don't use TABs but spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
 
+
+" Make search case insensitive
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 
+
+" Disable stupid backup and swap files - they trigger too many events
+" for file system watchers
 set nobackup
 set nowritebackup
 set noswapfile
