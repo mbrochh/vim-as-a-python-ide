@@ -1,5 +1,5 @@
 """Module for testing some python-mode features."""
-import os
+# import os
 
 from utils import set_breakpoint
 # from utils import does_not_exist
@@ -9,6 +9,7 @@ def main(*args, **kwargs):
     """See? We got nice syntax highting."""
     print 'Hello world'
     set_breakpoint(42, 42, data={'key': 'value', })
+
 
 def fold_this():
     """We can fold code blocks by pressing ``f``."""
