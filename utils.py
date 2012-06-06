@@ -13,7 +13,22 @@ def try_to_import_from_demo_py():
 
 
 def set_breakpoint(arg1, arg2, data=None):
-    """We can set breakpoints via ``<Leader>b``."""
+    """
+    We can set breakpoints via ``<Leader>b``.
+
+    Make sure you have ipython and ipdb installed::
+
+        pip install ipython
+        pip install ipdb
+
+    Then run your program from a new terminal window like so:
+
+        python demo.py
+
+    Use ``?`` to show all available commands and ``? <command>`` to show help
+    for a certain command.
+
+    """
     foo = 'bar'
     result = arg1 + arg2
     import ipdb; ipdb.set_trace() # BREAKPOINT
@@ -21,6 +36,8 @@ def set_breakpoint(arg1, arg2, data=None):
     print 'Then run ``python demo.py``.'
     import ipdb; ipdb.set_trace() # BREAKPOINT
     print 'Good bye!'
+
+    # Nice commands to try in ipdb:
     # ?
     # help a
     # a

@@ -2,7 +2,6 @@
 # import os
 
 from utils import set_breakpoint
-# from utils import does_not_exist
 
 
 def main(*args, **kwargs):
@@ -12,12 +11,12 @@ def main(*args, **kwargs):
 
 
 def fold_this():
-    """We can fold code blocks by pressing ``f``."""
+    """We can fold and unfold code blocks by pressing ``f``."""
     print 'Fold it.'
 
 
 def fold_all():
-    """We can fold everything by pressing ``F``."""
+    """We can fold and unfold everything by pressing ``F``."""
     print 'Fold all.'
 
 
@@ -30,14 +29,26 @@ def life_syntax_checking():
     """Pylint checks our code on each save."""
     # Try to uncomment this and save.
     # Try to uncomment the os import and save.
-    # Try to uncomment the does_not_exist imort and save.
-    # abc = 5
+    # abc = 5  # Try to uncomment this line and save.
+
+    # Now fix all reported issues!
+    # You can move down into the Quickfix window witch ``<C-j>``
+    # You can navigate up and down in that window with ``j`` and ``k``
+
+    # When you press enter, you will get back into this window at the correct
+    # line
 
 
 def code_completion():
     """Code completion makes life easy."""
+    life_syntax_checking
     # Try to call one of our methods here.
+    # i.e.: Type ``li`` and then press ``<C-SPACE>``
+    # You can navigate between then found choices by holding ``CTRL`` and using
+    # ``j`` and ``k``
+
     # Try to import something from utils
+    # i.e. Type ``from utils import`` and then press ``<C-SPACE>``
 
 
 def open_utils_py():
