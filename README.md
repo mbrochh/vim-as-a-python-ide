@@ -2,7 +2,10 @@
 
 This is the code for my PyCon APAC 2012 talk about Vim as Python IDE.
 
-You can find the slides as a PDF in this repository.
+Video: https://www.youtube.com/watch?v=YhqsjUUHj6g
+Slides: https://speakerdeck.com/u/mbrochh/p/vim-as-a-python-ide
+
+You can also find the slides as a PDF in this repository.
 
 If you want to start using Vim for the first time, have a look at the
 ``.vimrc`` file in this repository and gradually uncomment everything.
