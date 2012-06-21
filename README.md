@@ -2,8 +2,8 @@
 
 This is the code for my PyCon APAC 2012 talk about Vim as Python IDE.
 
-Video: https://www.youtube.com/watch?v=YhqsjUUHj6g
-Slides: https://speakerdeck.com/u/mbrochh/p/vim-as-a-python-ide
+Video: https://www.youtube.com/watch?v=YhqsjUUHj6g  
+Slides: https://speakerdeck.com/u/mbrochh/p/vim-as-a-python-ide  
 
 You can also find the slides as a PDF in this repository.
 
