@@ -12,3 +12,8 @@ If you want to start using Vim for the first time, have a look at the
 
 Then install the plugins mentionned at the bottom of the file and you should
 be good to go.
+
+Please note that I am no longer using the [python-mode](https://github.com/klen/python-mode)
+plugin. Instead I am now using the [jedi-vim](https://github.com/davidhalter/jedi-vim/)
+plugin, which I find a bit easier to configure and it seems to have better
+auto-completion features.
