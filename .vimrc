@@ -8,6 +8,15 @@
 " ============================================
 
 
+" TGs HACK
+
+nnoremap ½ $
+vmap ½ $
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -34,9 +43,9 @@ let mapleader = ","
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+"" noremap <C-n> :nohl<CR>
+"" vnoremap <C-n> :nohl<CR>
+"" inoremap <C-n> :nohl<CR>
 
 
 " Quicksave command
@@ -95,6 +104,7 @@ syntax on
 
 
 " Showing line numbers and length
+set relativenumber " show relative line numbers
 set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
@@ -114,9 +124,9 @@ set undolevels=700
 
 
 " Real programmers don't use TABs but spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set expandtab
 
@@ -150,16 +160,16 @@ call pathogen#infect()
 " Settings for vim-powerline
 " cd ~/.vim/bundle
 " git clone git://github.com/Lokaltog/vim-powerline.git
-"" set laststatus=2
+set laststatus=2
 
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
 " git clone https://github.com/kien/ctrlp.vim.git
-"" let g:ctrlp_max_height = 30
-"" set wildignore+=*.pyc
-"" set wildignore+=*_build/*
-"" set wildignore+=*/coverage/*
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
 
 
 " Settings for python-mode
@@ -180,10 +190,21 @@ call pathogen#infect()
 " Settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
-" let g:jedi#usages_command = "<leader>z"
-" let g:jedi#popup_on_dot = 0
-" let g:jedi#popup_select_first = 0
-" map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+let g:jedi#auto_initialization = 1
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#usages_command = "<leader>z"
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 1
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = "1"
+let g:jedi#completions_enabled = 1
+let g:jedi#auto_close_doc = 1
+let g:jedi#auto_vim_configuration = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Better navigating through omnicomplete option list
 " See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
@@ -198,7 +219,7 @@ call pathogen#infect()
 ""     endif
 ""     return a:action
 "" endfunction
-
+"" 
 "" inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 "" inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
